@@ -1,0 +1,15 @@
+﻿  Bill.cpp
+  Home Accounting.cpp
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(69,53): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(174,63): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(202,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(223,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(244,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(265,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(286,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(347,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(34,9): warning C4101: 'billArraySize': unreferenced local variable
+C:\Users\Admin\source\repos\Home Accounting\Home Accounting\Home Accounting.cpp(36,9): warning C4101: 'recurringArraySize': unreferenced local variable
+  Recurring.cpp
+  Generating Code...
+  Home Accounting.vcxproj -> C:\Users\Admin\source\repos\Home Accounting\x64\Debug\Home Accounting.exe
