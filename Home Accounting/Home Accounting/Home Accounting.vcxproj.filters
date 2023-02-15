@@ -21,15 +21,9 @@
     <ClCompile Include="Bill.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Recurring.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bill.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Recurring.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

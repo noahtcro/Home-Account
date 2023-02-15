@@ -1,47 +1,42 @@
 #include <cstdlib>
 #include <iomanip>
 #include <iostream>
-#include <stdlib.h>
 #include <string>
 #include <vector>
 
 #include "Bill.h"
-#include "Recurring.h"
 
-std::vector<Bill> createBill(vector<Bill> billVector);
-std::vector<Bill> oneTime(vector<Bill> billVector);
-void recurring();
-void editBill();
-void total();
+Bill enterBill();
+double enterIncome();
+void totals(vector<Bill> vector, double income);
 
 int main()
 {
-    vector<Bill> billVector;
+    vector<Bill> vector;
     int menu = 0;
+    double income = 0;
 
     std::cout << std::fixed;
     std::cout << std::setprecision(2);
 
-    std::cout << "Welcome to the Home Accounting program." << endl;
-
     do {
+        system("cls");
         std::cout << "1: Enter bills" << endl;
-        std::cout << "2: Edit bills" << endl;
+        std::cout << "2: Enter income" << endl;
         std::cout << "3: Get totals" << endl;
         std::cout << "4: Exit program" << endl;
         std::cout << "Please enter the number of your desired action: ";
         cin >> menu;
 
-        //Bill menu
         switch (menu) {
         case 1:
-            createBill(billVector) = billVector;
+            vector.push_back(enterBill());
             break;
         case 2:
-            editBill();
+            income = enterIncome();
             break;
         case 3:
-            total();
+            totals(vector, income);
             break;
         case 4:
             break;
@@ -49,59 +44,47 @@ int main()
     } while (menu != 4);
 }
 
-std::vector<Bill> createBill(vector<Bill> billVector) {
+Bill enterBill() {
     system("cls");
-    int billMenu = 0;
-
-    std::cout << "1: One-time bill" << endl;
-    std::cout << "2: Recurring bill" << endl;
-    std::cout << "Please enter the number of your desired action: ";
-    std::cin >> billMenu;
-
-    switch (billMenu) {
-    case 1:
-        oneTime(billVector);
-        break;
-    case 2:
-        recurring();
-        break;
-    }
-
-    return billVector;
-}
-
-std::vector<Bill> oneTime(vector<Bill> billVector) {
-    system("cls");
-    string name;
-
     Bill bill;
-    billVector.push_back(bill);
+    std::string name;
+    double cost = 0;
 
     std::cout << "Please enter the name of the bill: ";
-    std::cin >> name;
+    cin >> name;
+    bill.setBillName(name);
 
+    std::cout << "Please enter the bill amount: ";
+    cin >> cost;
+    bill.setBillCost(cost);
+
+    return bill;
+}
+
+double enterIncome() {
     system("cls");
+    double income = 0;
 
-    billVector[billVector.size() - 1].setBillName(name);
+    std::cout << "Please enter your monthly income: ";
+    cin >> income;
 
-    for (int i = 0; i != billVector.size(); i++) {
-        std::cout << billVector[i].getBillName() << std::endl;
+    return income;
+}
+
+void totals(vector<Bill> vector, double income) {
+    system("cls");
+    double total = 0;
+
+    for (int i = 0; i != vector.size(); i++) {
+        std::cout << i + 1 << ". " << vector[i].getBillName();
+        std::cout << "\t\t" << vector[i].getBillCost() << std::endl;
+        total = total + vector[i].getBillCost();
     }
+    std::cout << "Bill total: " << total << std::endl;
+    std::cout << "Income: " << income << std::endl;
 
+    double remainder = income - total;
+
+    std::cout << "Remainder: " << remainder << std::endl;
     system("pause");
-    system("cls");
-
-    return billVector;
-}
-
-void recurring() {
-    
-}
-
-void editBill() {
-
-}
-
-void total() {
-
 }
